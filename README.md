@@ -101,3 +101,4 @@
 6. 至 rootReducer 中新增剛剛建立的 slice (或稱 reducer)
 7. 修改其他檔案名稱與內容 (e.g asyncThunk、selector)
 8. 直接在 component 或是頁面中使用，中間有不清楚的話在根據相對應檔案看裡面說明
+9. 上述建置完畢後，之後要新增業務類別只要重複 3 ~ 6 步驟即可
