@@ -1,0 +1,39 @@
+.criminal-info {
+  outline: 1px solid black;
+  display: flex;
+  width: 350px;
+  height: 120px;
+  border-radius: 8px;
+  background-color: #fff;
+  cursor: pointer;
+  &__avatar {
+    width: 100px;
+    height: 100%;
+    padding: 20px 10px;
+    border-right: 1px solid lightgray;
+    &-img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    &-item {
+      display: flex;
+      &-column {
+        text-wrap: nowrap;
+      }
+    }
+  }
+  &--wanted {
+    background-color: palevioletred;
+    color: white;
+  }
+  &:hover {
+    background-color: gainsboro;
+  }
+}
