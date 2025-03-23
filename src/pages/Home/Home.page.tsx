@@ -24,6 +24,13 @@ const filteredMap = {
 const Home = () => {
   const [filteredGender, setFilteredGender] = useState<Gender>("all");
 
+  /**
+   * @description 這邊就是 selector 的使用方式，非常簡單，把我們在 redux.hooks 定義的 useAppSelector 取出
+   * @description 並傳入我們在 selector 裡面定義的 selector，就可以取得該 selector return 出來的資料
+   * @description 這個過程叫做訂閱，如果之後有任何 Redux action 造成這個資料變更，那麼 Redux 在更新的時候
+   * @description 會連帶 React 觸發 component re-render，非常方便。
+   * @description 這邊看完的話可以到瀏覽器點擊 Wanted 頁面，然後到 components/CriminalInfo.component 中查看
+   */
   const criminalsList = useAppSelector(filteredMap[filteredGender]);
 
   const onChangeToSelectGender = (e: ChangeEvent<HTMLSelectElement>) => {

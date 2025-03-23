@@ -4,10 +4,13 @@ import CriminalInfo from "../../components/CriminalInfo/CriminalInfo.component";
 
 import { selectWantedList } from "../../store/criminal/criminal.selector";
 
+import type { FC } from "react";
+
 import "./Wanted.style.scss";
 
-const Wanted = () => {
+const Wanted: FC = () => {
   const wantedList = useAppSelector(selectWantedList);
+
   return (
     <div className="wanted">
       <div className="wanted__content">
